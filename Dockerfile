@@ -1,6 +1,6 @@
 FROM tiangolo/uvicorn-gunicorn-fastapi:latest
 WORKDIR /ctrl
 COPY . /ctrl
-EXPOSE 8001
+EXPOSE 5000
 RUN pip install groq
-CMD ["python", "mini_groq.py"]
+CMD ["python", "mini_groq.py", "uvicorn"]
